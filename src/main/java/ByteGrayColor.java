@@ -51,7 +51,7 @@ public class ByteGrayColor implements GrayColor {
         if (this == o) return true;
         if (this.getClass() != o.getClass()) return false;
         ByteGrayColor color = (ByteGrayColor) o;
-        return this.compareTo(color) == 0;
+        return grayLevel == color.grayLevel;
     }
 
 }
