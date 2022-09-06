@@ -35,7 +35,7 @@ public class ByteGrayColor implements GrayColor {
 
     @Override
     public Color getColor(){
-        double component = grayLevel / (double) MAXIMUM_GRAY_LEVEL;
+        double component = getLuminosity();
         return new Color(component, component, component, OPACITY);
     }
 
