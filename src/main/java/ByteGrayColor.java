@@ -18,13 +18,11 @@ public class ByteGrayColor implements GrayColor {
     }
 
     public ByteGrayColor(int grayLevel) {
-        // TODO : Corriger l'initialisation de la propriété grayLevel de l'instance.
-        this.grayLevel = 0;
+        this.grayLevel = grayLevel;
     }
 
     public ByteGrayColor(double luminosity) {
-        // TODO : Corriger l'initialisation de la propriété grayLevel de l'instance.
-        this.grayLevel = 0;
+        this.grayLevel = ;
     }
 
     @Override
