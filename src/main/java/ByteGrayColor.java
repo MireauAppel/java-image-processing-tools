@@ -52,4 +52,9 @@ public class ByteGrayColor implements GrayColor {
         return grayLevel == color.grayLevel;
     }
 
+    @Override
+    public GrayColor invert(){
+        return new ByteGrayColor(MAXIMUM_GRAY_LEVEL-grayLevel);
+    }
+
 }
