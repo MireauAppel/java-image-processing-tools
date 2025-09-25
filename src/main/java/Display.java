@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 /**
  * Created by Arnaud Labourel on 04/10/2018.
  */
-public class Display implements Initializable {
+public class Display implements Initializable  {
     @FXML
     private Canvas canvas;
 
@@ -18,9 +18,9 @@ public class Display implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         this.image = MatrixGrayImage.createImageFromPGMFile("images/luminy.pgm");
-
+        Invert invertedImage = new Invert();
+        invertedImage.applyTo(image);
         render();
     }
 

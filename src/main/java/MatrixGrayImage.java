@@ -22,13 +22,11 @@ public class MatrixGrayImage implements GrayImage {
 
     @Override
     public GrayColor getPixelGrayColor(int x, int y) {
-        // TODO : Changer les instructions pour retourner le bon pixel.
         return new ByteGrayColor(pixels[x][y].getLuminosity());
     }
 
     @Override
     public Color getPixelColor(int x, int y) {
-        // TODO : Changer les instructions pour retourner la couleur du pixel.
         return pixels[x][y].getColor();
     }
 
@@ -43,9 +41,6 @@ public class MatrixGrayImage implements GrayImage {
     }
 
     public MatrixGrayImage(int width, int height){
-        /* TODO : Modifier les instructions pour initialiser correctement
-            les propriétés de l'instance.
-         */
         this.width = width;
         this.height = height;
         this.pixels = new GrayColor[width][height];
