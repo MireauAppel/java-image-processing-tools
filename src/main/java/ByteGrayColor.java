@@ -24,7 +24,7 @@ public class ByteGrayColor implements GrayColor {
     }
 
     public ByteGrayColor(double luminosity) {
-        this.grayLevel = (int)luminosity*255 ;
+        this.grayLevel = (int)(luminosity*255) ;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class ByteGrayColor implements GrayColor {
 
     @Override
     public int compareTo(GrayColor o) {
-        return Double.compare(o.getLuminosity(),(double)this.getLuminosity());
+        return Double.compare((double)this.getLuminosity(),o.getLuminosity());
     }
 
     @Override
