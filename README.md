@@ -4,7 +4,7 @@
 
 Ce projet est l'occasion de travailler sur la représentation et la manipulation d'images. Ces images seront constituées de pixels caractérisés par une couleur représentant un niveau de gris.
 
-## Membre du projet
+## Membres du projet
 
 - CEREZUELA, Luca
 - APPEL, Mireau
