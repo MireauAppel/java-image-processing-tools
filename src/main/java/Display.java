@@ -5,6 +5,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.PixelWriter;
 
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
 /**
@@ -19,8 +20,10 @@ public class Display implements Initializable  {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.image = MatrixGrayImage.createImageFromPGMFile("images/luminy.pgm");
-        Invert invertedImage = new Invert();
-        invertedImage.applyTo(image);
+        // Invert invertedImage = new Invert();
+        // invertedImage.applyTo(image);
+        DecreaseGrayLevels decreasedImage = new DecreaseGrayLevels();
+        decreasedImage.applyTo(image);
         render();
     }
 

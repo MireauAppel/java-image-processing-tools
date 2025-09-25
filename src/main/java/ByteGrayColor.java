@@ -57,4 +57,17 @@ public class ByteGrayColor implements GrayColor {
         return new ByteGrayColor(MAXIMUM_GRAY_LEVEL-grayLevel);
     }
 
+    @Override
+    public GrayColor splitLuminosity() {
+        double step = (double) 1 / (DecreaseGrayLevels.nbGrayLevels - 1);
+
+        int i = 0;
+        while (i < DecreaseGrayLevels.nbGrayLevels - 1){
+            if( step * (i) <= this.getLuminosity() && this.getLuminosity() < step * (i+1) ){
+                return new ByteGrayColor(step * i );
+            }
+            i++;
+    }
+        return new ByteGrayColor(1.00);
+    }
 }
