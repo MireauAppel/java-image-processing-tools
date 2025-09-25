@@ -9,6 +9,8 @@ public class ByteGrayColor implements GrayColor {
     private static final int MINIMUM_GRAY_LEVEL = 0;
     private static final int MAXIMUM_GRAY_LEVEL = 255;
     private static final int OPACITY = 1;
+    public static final int BLACK = 0;
+    public static final int WHITE = 255;
 
     private final int grayLevel;
 
@@ -22,6 +24,7 @@ public class ByteGrayColor implements GrayColor {
     }
 
     public ByteGrayColor(double luminosity) {
+
         this.grayLevel = ;
     }
 
