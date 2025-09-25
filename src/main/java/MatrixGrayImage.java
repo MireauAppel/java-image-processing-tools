@@ -17,14 +17,13 @@ public class MatrixGrayImage implements GrayImage {
 
     @Override
     public void setPixel(GrayColor gray, int x, int y) {
-        // TODO : Compléter la méthode pour modifier le pixel.
         pixels[x][y] = gray;
     }
 
     @Override
     public GrayColor getPixelGrayColor(int x, int y) {
         // TODO : Changer les instructions pour retourner le bon pixel.
-        return new ByteGrayColor();
+        return new ByteGrayColor(pixels[x][y].getLuminosity());
     }
 
     @Override
