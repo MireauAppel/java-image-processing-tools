@@ -41,9 +41,7 @@ public class ByteGrayColor implements GrayColor {
 
     @Override
     public int compareTo(GrayColor o) {
-        // TODO : Retourner la différence de niveau de gris.
-
-        return 0;
+        return Double.compare(o.getLuminosity(),(double)this.getLuminosity());
     }
 
     @Override
