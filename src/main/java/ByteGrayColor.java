@@ -24,14 +24,12 @@ public class ByteGrayColor implements GrayColor {
     }
 
     public ByteGrayColor(double luminosity) {
-
-        this.grayLevel = ;
+        this.grayLevel = (int)luminosity*255 ;
     }
 
     @Override
     public double getLuminosity() {
-        // TODO : Retourner la luminosité de la couleur (entre 0 noir et 1 blanc)
-        return 0;
+        return (double)this.grayLevel/255;
     }
 
     @Override
@@ -44,6 +42,7 @@ public class ByteGrayColor implements GrayColor {
     @Override
     public int compareTo(GrayColor o) {
         // TODO : Retourner la différence de niveau de gris.
+
         return 0;
     }
 
