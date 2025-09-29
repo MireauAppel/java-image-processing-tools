@@ -4,7 +4,7 @@ public class Outline implements Transform {
     @Override
     public void applyTo(GrayImage image) {
         double difference = Math.abs(image.getPixelGrayColor(int x, int y));
-        return;
+        return; test test
     }
 
 }
