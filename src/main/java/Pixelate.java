@@ -20,7 +20,7 @@ public class Pixelate implements Transform {
                 moyenne = moyenne / newPixelSize * newPixelSize; // vraie moyenne du carré
                 for (int x = 0; x < newPixelSize; x++) {
                     for (int y = 0; y < newPixelSize; y++) {
-                        image.setPixel(moyenne, x + i, y + j); // sum of everything
+                      //  image.setPixel(moyenne, x + i, y + j); // sum of everything
                     }
                 }
 
