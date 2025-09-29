@@ -9,4 +9,6 @@ public interface GrayColor extends Comparable<GrayColor> {
     Color getColor();
     GrayColor invert();
     GrayColor splitLuminosity();
+    GrayColor outline();
+    GrayColor noOutline();
 }
