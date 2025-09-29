@@ -7,7 +7,7 @@ public class Outline implements Transform {
             for (int y = 0; y < image.getHeight()-1; y++) {
                 double differenceRight = Math.abs(image.getPixelGrayColor(x+1, y).getLuminosity()-image.getPixelGrayColor(x, y).getLuminosity());
                 double differenceBelow = Math.abs(image.getPixelGrayColor(x, y+1).getLuminosity()-image.getPixelGrayColor(x, y).getLuminosity());
-                if (differenceRight <= Threshold || differenceBelow <= Threshold) {
+                if (differenceRight > Threshold || differenceBelow > Threshold) {
                     image.setPixel(image.getPixelGrayColor(x, y).outline(), x, y);
                 }
                 else {

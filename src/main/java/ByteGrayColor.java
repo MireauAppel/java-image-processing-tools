@@ -71,11 +71,11 @@ public class ByteGrayColor implements GrayColor {
         return new ByteGrayColor(1.00);
     }
 
-    public GrayColor noOutline() {
+    public GrayColor outline() {
         return new ByteGrayColor(BLACK);
     }
 
-    public GrayColor outline() {
+    public GrayColor noOutline() {
         return new ByteGrayColor(WHITE);
     }
 
