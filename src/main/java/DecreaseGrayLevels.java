@@ -1,5 +1,5 @@
 public class DecreaseGrayLevels implements Transform {
-    public static int nbGrayLevels = 5;
+    public static int nbGrayLevels = 8;
 
     public void applyTo(GrayImage image) {
         for (int x = 0; x < image.getWidth(); x++) {

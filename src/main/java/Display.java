@@ -38,6 +38,10 @@ public class Display implements Initializable  {
         //VerticalInversion YinvertedImage = new VerticalInversion();
         //YinvertedImage.applyTo(image);
 
+        //Tâche 7
+        //CompositeTransform compositeTransform = new CompositeTransform();
+        //compositeTransform.applyTo(image);
+
         render();
     }
 
