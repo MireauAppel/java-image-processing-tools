@@ -5,7 +5,6 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.PixelWriter;
 
 import java.net.URL;
-import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
 /**
@@ -24,10 +23,12 @@ public class Display implements Initializable  {
         //invertedImage.applyTo(image);
         //DecreaseGrayLevels decreasedImage = new DecreaseGrayLevels();
         //decreasedImage.applyTo(image);
-        //Invert invertedImage = new Invert();
-        //invertedImage.applyTo(image);
-        Outline outlinedImage = new Outline();
-        outlinedImage.applyTo(image);
+        //Outline outlinedImage = new Outline();
+        //outlinedImage.applyTo(image);
+
+        //Tâche 7
+        CompositeTransform compositeTransform = new CompositeTransform();
+        compositeTransform.applyTo(image);
         render();
     }
 

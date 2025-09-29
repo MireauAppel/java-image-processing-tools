@@ -1,5 +1,5 @@
 public class Outline implements Transform {
-    public static double Threshold = 0.025;
+    public static double Threshold = 0.05;
 
     @Override
     public void applyTo(GrayImage image) {
