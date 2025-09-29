@@ -15,8 +15,8 @@ public class ByteGrayColor implements GrayColor {
     private final int grayLevel;
 
 
-    public ByteGrayColor(){
-       this.grayLevel = MINIMUM_GRAY_LEVEL;
+    public ByteGrayColor() {
+        this.grayLevel = MINIMUM_GRAY_LEVEL;
     }
 
     public ByteGrayColor(int grayLevel) {
@@ -24,16 +24,16 @@ public class ByteGrayColor implements GrayColor {
     }
 
     public ByteGrayColor(double luminosity) {
-        this.grayLevel = (int)(luminosity*255) ;
+        this.grayLevel = (int) (luminosity * 255);
     }
 
     @Override
     public double getLuminosity() {
-        return (double)this.grayLevel/255;
+        return (double) this.grayLevel / 255;
     }
 
     @Override
-    public Color getColor(){
+    public Color getColor() {
         double component = getLuminosity();
         return new Color(component, component, component, OPACITY);
     }
@@ -41,7 +41,7 @@ public class ByteGrayColor implements GrayColor {
 
     @Override
     public int compareTo(GrayColor o) {
-        return Double.compare((double)this.getLuminosity(),o.getLuminosity());
+        return Double.compare((double) this.getLuminosity(), o.getLuminosity());
     }
 
     @Override
@@ -53,7 +53,7 @@ public class ByteGrayColor implements GrayColor {
     }
 
     @Override
-    public GrayColor invert(){
+    public GrayColor invert() {
         return new ByteGrayColor(MAXIMUM_GRAY_LEVEL - grayLevel);
     }
 
@@ -62,13 +62,21 @@ public class ByteGrayColor implements GrayColor {
         double step = (double) 1 / (DecreaseGrayLevels.nbGrayLevels - 1);
 
         int i = 0;
-        while (i < DecreaseGrayLevels.nbGrayLevels - 1){
-            if( step * (i) <= this.getLuminosity() && this.getLuminosity() < step * (i+1) ){
-                return new ByteGrayColor(step * i );
+        while (i < DecreaseGrayLevels.nbGrayLevels - 1) {
+            if (step * (i) <= this.getLuminosity() && this.getLuminosity() < step * (i + 1)) {
+                return new ByteGrayColor(step * i);
             }
             i++;
-    }
+        }
         return new ByteGrayColor(1.00);
+    }
+
+    public GrayColor outline() {
+        return new ByteGrayColor(BLACK);
+    }
+
+    public GrayColor noOutline() {
+        return new ByteGrayColor(WHITE);
     }
 
 }
