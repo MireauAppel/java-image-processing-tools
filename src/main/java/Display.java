@@ -20,27 +20,31 @@ public class Display implements Initializable  {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.image = MatrixGrayImage.createImageFromPGMFile("images/luminy.pgm");
+        /// Tâche 3 : inversion couleur
         //Invert invertedImage = new Invert();
         //invertedImage.applyTo(image);
 
+        /// Tâche 4 : baisser le niveau de gris
         //DecreaseGrayLevels decreasedImage = new DecreaseGrayLevels();
         //decreasedImage.applyTo(image);
 
-        //Invert invertedImage = new Invert();
-        //invertedImage.applyTo(image);
-
+        /// Tâche 5 : mettre des outlines
         //Outline outlinedImage = new Outline();
         //outlinedImage.applyTo(image);
 
-        //HorizontalInversion XinvertedImage = new HorizontalInversion();
-        //XinvertedImage.applyTo(image);
+        /// Tâche 6 : pixeliser les images
+        //Pixelate pixelatedImage = new Pixelate();
+        //pixelatedImage.applyTo(image);
 
-        //VerticalInversion YinvertedImage = new VerticalInversion();
-        //YinvertedImage.applyTo(image);
-
-        //Tâche 7
+        /// Tâche 7 : composite des tâches précédentes
         //CompositeTransform compositeTransform = new CompositeTransform();
         //compositeTransform.applyTo(image);
+
+        /// Tâche supplémentaire : inversion horizontalement ou/et verticalement
+        //HorizontalInversion XinvertedImage = new HorizontalInversion();
+        //XinvertedImage.applyTo(image);
+        //VerticalInversion YinvertedImage = new VerticalInversion();
+        //YinvertedImage.applyTo(image);
 
         render();
     }
