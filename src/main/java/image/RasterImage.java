@@ -4,8 +4,8 @@ import javafx.scene.paint.Color;
 import util.Matrices;
 
 public abstract class RasterImage implements Image {
-    int width;
-    int height;
+    public int width;
+    public int height;
 
     public RasterImage(Color color, int width , int height){
         this.width = width;
