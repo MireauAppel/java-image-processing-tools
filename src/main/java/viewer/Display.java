@@ -20,7 +20,7 @@ public class Display implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //ImageFactory imageFactory = new RasterUniformImageFactory(200, 200, Color.RED, RasterImageType.BRUTE);
-        ImageFactory imageFactory = new RasterFlagFactory(900, 600, Color.BLUE, Color.WHITE, Color.RED, RasterImageType.BRUTE);
+        ImageFactory imageFactory = new RasterFlagFactory(900, 600, Color.BLACK, Color.YELLOW, Color.RED, RasterImageType.BRUTE);
 
         this.image = imageFactory.makeImage();
         render();
