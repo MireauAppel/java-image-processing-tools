@@ -16,11 +16,12 @@ public class BruteRasterImage implements Image {
         setPixelsColor(color);
     }
     public BruteRasterImage(Color[][] colors){
-        this.pixels = colors;
-        createRepresentation();
-        setPixelsColor(colors);
         Matrices.requiresNonNull(colors);
         Matrices.requiresNonZeroDimensions(colors);
+        setWidth(Matrices.getRowCount(colors));
+        setHeight(Matrices.getColumnCount(colors));
+        createRepresentation();
+        setPixelsColor(colors);
     }
 
     public void createRepresentation(){
