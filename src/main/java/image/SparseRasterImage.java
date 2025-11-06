@@ -26,5 +26,4 @@ public class SparseRasterImage extends RasterImage {
     public Color getPixelColor(int x, int y){
         return this.colorMap.get(new Point(x, y));
     }
-
 }
