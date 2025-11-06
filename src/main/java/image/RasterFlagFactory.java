@@ -31,9 +31,9 @@ public class RasterFlagFactory implements ImageFactory {
         }
         switch (rasterImageType){
             case BRUTE:
-                return new BruteRasterImage(colors);
+                return new BruteRasterImageAbstract(colors);
             case PALETTE:
-                return new PaletteRasterImage(colors);
+                return new PaletteRasterImageAbstract(colors);
             default:
                 throw new NotSupportedException(rasterImageType + " is not supported");
         }
