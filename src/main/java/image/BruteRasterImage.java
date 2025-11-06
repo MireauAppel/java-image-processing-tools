@@ -5,15 +5,15 @@ import util.Matrices;
 import javafx.scene.paint.Color;
 
 public class BruteRasterImage implements Image {
-    private Color color;
     private int width;
     private int height;
     private Color[][] pixels;
 
     public BruteRasterImage(Color color, int width, int height){
-        this.color = color;
         this.width = width;
         this.height = height;
+        createRepresentation();
+        setPixelsColor(color);
     }
     public BruteRasterImage(Color color, Color[][] colors){
         this.pixels = colors;
@@ -35,7 +35,11 @@ public class BruteRasterImage implements Image {
         return this.pixels[x][y];
     }
     private void setPixelsColor(Color[][] pixels){
-        this.pixels = pixels;
+        for (int x = 0; x < width; x++){
+            for (int y = 0; y < height; y++){
+                setPixelColor(pixels[x][y], x, y);
+            }
+        }
     }
     private void setPixelsColor(Color color){
         for (int x = 0; x < width; x++){

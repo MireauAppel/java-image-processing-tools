@@ -19,11 +19,8 @@ public class Display implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ImageFactory imageFactory = new BlankImageFactory();
-        // TODO : changer la fabrique d'image pour construire des images.
-
+        ImageFactory imageFactory = new RasterUniformImageFactory(200, 200, Color.RED, RasterImageType.BRUTE);
         this.image = imageFactory.makeImage();
-
         render();
     }
 
