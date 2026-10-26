@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MatrixGrayImageTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-09-25T10:02:08" hostname="V-PJ-47-L-058" time="0.076">
+  <properties/>
+  <testcase name="testGetWidth()" classname="MatrixGrayImageTest" time="0.066"/>
+  <testcase name="testGetHeight()" classname="MatrixGrayImageTest" time="0.001"/>
+  <testcase name="testGetPixel_whenPixelHasBeenSet()" classname="MatrixGrayImageTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
